@@ -1,22 +1,32 @@
 # Deployment Information
 
 ## Public URL
-https://ai-agent-production.up.railway.app
+http://103.72.99.109:7777/
 
 ## Platform
-Railway
+Self-hosted VPS
 
 ## Test Commands
 
 ### Health Check
 ```bash
-curl https://ai-agent-production.up.railway.app/health
-# Expected: {"status": "ok"}
+curl http://103.72.99.109:7777/health
+{
+  "status": "ok",
+  "version": "1.0.0",
+  "environment": "staging",
+  "uptime_seconds": 2149.7,
+  "total_requests": 55,
+  "checks": {
+    "llm": "mock"
+  },
+  "timestamp": "2026-04-17T10:21:07.752306+00:00"
+}
 ```
 
 ### API Test (with authentication)
 ```bash
-curl -X POST https://ai-agent-production.up.railway.app/ask \
+curl -X POST http://103.72.99.109:7777/ask \
   -H "X-API-Key: YOUR_KEY" \
   -H "Content-Type: application/json" \
   -d '{"user_id": "test", "question": "Hello"}'
@@ -32,6 +42,6 @@ curl -X POST https://ai-agent-production.up.railway.app/ask \
 - `DAILY_BUDGET_USD=5.0`
 
 ## Screenshots
-- [Deployment dashboard](screenshots/dashboard.png)
-- [Service running](screenshots/running.png)
-- [Test results](screenshots/test.png)
+- ![Deployment dashboard](./06-lab-complete/dashboard.png)
+- ![Service running](./06-lab-complete/service-running.png)
+- ![Test results](./06-lab-complete/test.png)

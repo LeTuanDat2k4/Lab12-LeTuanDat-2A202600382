@@ -32,9 +32,9 @@
 
 ## Part 3: Cloud Deployment
 
-### Exercise 3.1: Railway deployment
-- URL: https://ai-agent-production.up.railway.app
-- Screenshot: [Link to screenshot in repo](screenshots/dashboard.png)
+### Exercise 3.1: VPS deployment
+- URL: http://103.72.99.109:7777/
+- Screenshot: [Link to screenshot in repo](./06-lab-complete/test.png)
 
 ## Part 4: API Security
 
